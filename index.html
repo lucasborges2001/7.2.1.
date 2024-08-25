@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saludar</title>
-    <script src="evento.js"></script>
+    <!-- Tuve que poner "defer" para que se ejecute luego de cargar el dom, sino daba error. -->
+    <script src="evento.js" defer></script> 
 </head>
 <body>
-    <div style="padding: 5px;">
+    <style>
+        #contenedorDiv{        
+            padding: 5px; 
+            background-color: green;
+        }
+    </style>
+    <div id="contenedorDiv">
         <button id="btn" onclick="alert('Hola')">Saludar</button>
     </div>
 </body>
